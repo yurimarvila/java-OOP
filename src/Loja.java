@@ -28,5 +28,11 @@ public class Loja {
 
         Cliente c2 = new Cliente("Maria", "98765432111", "maria@maria");
         c2.exibir();
+
+        // Pedido
+        Pedido pedido1 = new Pedido(c1); // Criando um objeto da classe Pedido associado ao cliente c1
+        pedido1.adicionarProduto(p1); // Adicionando o produto p1 ao pedido
+        pedido1.adicionarProduto(p4); // Adicionando o produto p4 ao pedido
+        pedido1.exibir(); // Exibindo os detalhes do pedido, incluindo o cliente, os produtos e o total
     }
 }
