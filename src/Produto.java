@@ -17,7 +17,11 @@ public class Produto { // Classe Produto com atributos e métodos
     }
 
     public void setPreco(double preco) { // Setter para definir o preço do produto
-        this.preco = preco;
+        if (preco >= 0) {
+            this.preco = preco;
+        } else {
+            System.out.println("Preço inválido. O preço deve ser maior que zero.");
+        }
     }
 
     public int getQuantidade() { // Getter para obter a quantidade do produto
