@@ -9,13 +9,14 @@ public class Pedido {
         this.produtos = new ArrayList<>();
     }
 
+    // Esse é o metodo para adicionar somente um produto
     public void adicionarProduto(Produto compra) { // Método para adicionar um produto ao pedido
         this.produtos.add(compra);
     }
 
     public double calcularTotal() {
         double total = 0;
-        for (Produto produto : produtos) {
+        for (Produto produto : produtos) { // Itera sobre cada produto na lista de produtos do pedido
             total += produto.getPreco() * produto.getQuantidade(); // Calcula o total multiplicando o preço pela
                                                                    // quantidade de cada produto
         }

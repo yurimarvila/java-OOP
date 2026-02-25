@@ -3,10 +3,10 @@ public class Loja {
         Produto p1 = new Produto("Notebook", 3500, 10); // Criando um objeto da classe Produto usando o construtor
         p1.exibir();
 
-        Produto p2 = new Produto("Smartphone", 1500, 20);
+        Produto p2 = new Produto("Smartphone Pro", 1500, 20);
         p2.exibir();
 
-        Produto p3 = new Produto("Tablet", 1000, 15);
+        Produto p3 = new Produto("Tablet Pro", 1000, 15);
         p3.exibir();
 
         p1.setPreco(-500); // Tentando definir um preço negativo para o produto p1, o que é inválido
@@ -34,5 +34,24 @@ public class Loja {
         pedido1.adicionarProduto(p1); // Adicionando o produto p1 ao pedido
         pedido1.adicionarProduto(p4); // Adicionando o produto p4 ao pedido
         pedido1.exibir(); // Exibindo os detalhes do pedido, incluindo o cliente, os produtos e o total
+
+        ///////////////////////////
+        Estoque estoque = new Estoque(); // Criando um objeto da classe Estoque
+        estoque.adicionarProduto(p1); // Adicionando o produto p1 ao estoque        
+        estoque.adicionarProduto(p2); // Adicionando o produto p2 ao estoque
+        estoque.adicionarProduto(p3); // Adicionando o produto p3 ao estoque
+        estoque.adicionarProduto(p4); // Adicionando o produto p4 ao estoque
+        estoque.adicionarProduto(p5); // Adicionando o produto p5 ao estoque
+
+        estoque.exibirTodos(); // Exibindo todos os produtos do estoque
+
+        estoque.exibirAbaixoDoEstoque(10); // Exibindo produtos abaixo do estoque mínimo
+
+        Produto encontrado = estoque.buscarPorNome("Notebook");
+        if (encontrado != null) {
+            encontrado.exibir();
+        } else {
+            System.out.println("Produto não encontrado.");
+        }
     }
 }
