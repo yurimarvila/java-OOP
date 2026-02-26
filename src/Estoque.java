@@ -7,6 +7,10 @@ public class Estoque {
         this.p = new ArrayList<>();
     }
 
+    public ArrayList<Produto> getProdutos() { // Getter para obter a lista de produtos do estoque
+        return new ArrayList<>(p); // Retorna uma cópia da lista para evitar modificações diretas
+    }
+
     public void adicionarProduto(Produto p) { // Método para adicionar um produto ao pedido
         this.p.add(p);
     }

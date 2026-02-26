@@ -56,5 +56,9 @@ public class Loja {
         } else {
             System.out.println("Produto não encontrado.");
         }
+
+        Relatorio.gerarRelatorio(estoque, pedido1); // Gerando um relatório do sistema, incluindo o estoque, os produtos
+                                                    // abaixo do estoque mínimo, o pedido e os descontos disponíveis
+
     }
 }
