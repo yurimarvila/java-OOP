@@ -12,7 +12,7 @@ Consolidar os quatro pilares do POO — encapsulamento, herança, polimorfismo e
 
 ## 🛠️ Tecnologias
 
-- Java 8 (OpenJDK - Red Hat)
+- Java 25 LTS
 - Visual Studio Code
 - Extension Pack for Java (Microsoft)
 
