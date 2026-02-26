@@ -1,6 +1,8 @@
 public class Loja {
     public static void main(String[] args) { // Método principal
         Produto p1 = new Produto("Notebook", 3500, 10); // Criando um objeto da classe Produto usando o construtor
+        double descontoAplicado = p1.aplicarDesconto(10); // Aplicando um desconto de 10% ao produto p1
+        System.out.println("Desconto aplicado: R$ " + descontoAplicado);
         p1.exibir();
 
         Produto p2 = new Produto("Smartphone Pro", 1500, 20);
@@ -14,7 +16,8 @@ public class Loja {
 
         /////////////////////////////////////////////////////////////
         Eletronico p4 = new Eletronico("Smartphone", 1500, 20, "5V"); // Criando um objeto da classe Eletronico usando o
-                                                                      // construtor
+        double descontoAplicadoEletronico = p4.aplicarDesconto(5); // Aplicando um desconto de 10% ao produto p4
+        System.out.println("Desconto aplicado ao eletrônico: R$ " + descontoAplicadoEletronico);
         p4.exibir();
 
         Eletronico p5 = new Eletronico("Tablet", 1000, 15, "3V");
@@ -37,7 +40,7 @@ public class Loja {
 
         ///////////////////////////
         Estoque estoque = new Estoque(); // Criando um objeto da classe Estoque
-        estoque.adicionarProduto(p1); // Adicionando o produto p1 ao estoque        
+        estoque.adicionarProduto(p1); // Adicionando o produto p1 ao estoque
         estoque.adicionarProduto(p2); // Adicionando o produto p2 ao estoque
         estoque.adicionarProduto(p3); // Adicionando o produto p3 ao estoque
         estoque.adicionarProduto(p4); // Adicionando o produto p4 ao estoque

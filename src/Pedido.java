@@ -4,7 +4,7 @@ public class Pedido {
     private Cliente cliente;// Atributo para armazenar o cliente associado ao pedido
     private ArrayList<Produto> produtos;// Atributo para armazenar a lista de produtos do pedido
 
-    public Pedido(Cliente cliente) { // Construtor para inicializar o cliente e a lista de produtos
+    public Pedido (Cliente cliente) { // Construtor para inicializar o cliente e a lista de produtos
         this.cliente = cliente;
         this.produtos = new ArrayList<>();
     }

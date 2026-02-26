@@ -1,8 +1,22 @@
-public class Produto { // Classe Produto com atributos e métodos
+public class Produto implements Desconto { // Classe Produto com atributos e métodos
 
     private String nome;
     private double preco;
     private int quantidade;
+
+    /////////////////////////// Implementação dos métodos da interface Desconto
+    /////////////////////////// ///////////////////////////
+
+    // % de desconto será aplicado no main da classe Loja, onde o método
+    // aplicarDesconto será chamado
+
+    @Override
+    public double aplicarDesconto(double percentual) {
+        return getPreco() * (1 - percentual / 100);
+    }
+
+    /////////////////////////// Fim da implementação dos métodos da interface
+    /////////////////////////// Desconto ///////////////////////////
 
     public String getNome() { // Getter para obter o nome do produto
         return nome;

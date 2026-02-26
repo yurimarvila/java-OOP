@@ -1,6 +1,15 @@
 public class Eletronico extends Produto { // Classe Eletronico que herda da classe Produto
     private String voltagem;
 
+    /////////////////////////// Implementação dos métodos da interface Desconto
+
+    @Override
+    public double aplicarDesconto(double percentual) {
+        return getPreco() * (1 - percentual / 100); // Aplica o desconto diretamente no preço do eletrônico, sem considerar a quantidade
+    }
+
+    //////////////// Fim da implementação dos métodos da interface Desconto
+
     public Eletronico(String nome, double preco, int quantidade, String voltagem) {
         super(nome, preco, quantidade); // Chama o construtor da classe pai (Produto)
         this.voltagem = voltagem;
