@@ -6,10 +6,10 @@ public class Loja {
         p1.exibir();
 
         Produto p2 = new Produto("Smartphone Pro", 1500, 20);
-        p2.exibir();
+        // p2.exibir();
 
         Produto p3 = new Produto("Tablet Pro", 1000, 15);
-        p3.exibir();
+        // p3.exibir();
 
         p1.setPreco(-500); // Tentando definir um preço negativo para o produto p1, o que é inválido
         System.out.println(p1.getPreco());
@@ -17,26 +17,32 @@ public class Loja {
         /////////////////////////////////////////////////////////////
         Eletronico p4 = new Eletronico("Smartphone", 1500, 20, "5V"); // Criando um objeto da classe Eletronico usando o
         double descontoAplicadoEletronico = p4.aplicarDesconto(5); // Aplicando um desconto de 10% ao produto p4
-        System.out.println("Desconto aplicado ao eletrônico: R$ " + descontoAplicadoEletronico);
+        System.out.println("Desconto aplicado ao eletrônico: R$ " +
+                descontoAplicadoEletronico);
         p4.exibir();
 
         Eletronico p5 = new Eletronico("Tablet", 1000, 15, "3V");
-        p5.exibir();
+        // p5.exibir();
 
         ///////////////////////////////////////////////////
 
         Cliente c1 = new Cliente("Yuri", "123456789", "yuri@yuri"); // Criando um objeto da classe Cliente usando o
                                                                     // construtor padrão
-        c1.exibir();
+        // c1.exibir();
 
         Cliente c2 = new Cliente("Maria", "98765432111", "maria@maria");
-        c2.exibir();
+        // c2.exibir();
 
         // Pedido
         Pedido pedido1 = new Pedido(c1); // Criando um objeto da classe Pedido associado ao cliente c1
         pedido1.adicionarProduto(p1); // Adicionando o produto p1 ao pedido
         pedido1.adicionarProduto(p4); // Adicionando o produto p4 ao pedido
-        pedido1.exibir(); // Exibindo os detalhes do pedido, incluindo o cliente, os produtos e o total
+        pedido1.exibir(); // Exibindo os detalhes do pedido, incluindo o cliente, os
+
+        Pedido pedido2 = new Pedido(c2); // Criando um objeto da classe Pedido associado ao cliente c1
+        pedido2.adicionarProduto(p2); // Adicionando o produto p1 ao pedido
+        pedido2.adicionarProduto(p3); // Adicionando o produto p4 ao pedido
+        // pedido2.exibir(); // Exibindo os detalhes do pedido, incluindo o cliente, os
 
         ///////////////////////////
         Estoque estoque = new Estoque(); // Criando um objeto da classe Estoque
@@ -48,7 +54,7 @@ public class Loja {
 
         estoque.exibirTodos(); // Exibindo todos os produtos do estoque
 
-        estoque.exibirAbaixoDoEstoque(10); // Exibindo produtos abaixo do estoque mínimo
+        estoque.exibirAbaixoDoEstoque(10); // Exibindo produtos abaixo do estoqu mínimo
 
         Produto encontrado = estoque.buscarPorNome("Notebook");
         if (encontrado != null) {
