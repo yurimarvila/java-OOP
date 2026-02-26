@@ -12,6 +12,9 @@ public class Produto implements Desconto { // Classe Produto com atributos e mé
 
     @Override
     public double aplicarDesconto(double percentual) {
+        if (percentual > 20) {
+            percentual = 20; // Limita o desconto máximo a 20%
+        }
         return getPreco() * (1 - percentual / 100);
     }
 

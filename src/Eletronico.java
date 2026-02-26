@@ -5,7 +5,11 @@ public class Eletronico extends Produto { // Classe Eletronico que herda da clas
 
     @Override
     public double aplicarDesconto(double percentual) {
-        return getPreco() * (1 - percentual / 100); // Aplica o desconto diretamente no preço do eletrônico, sem considerar a quantidade
+        if (percentual > 10) {
+            percentual = 10; // Limita o desconto máximo a 10% para eletrônicos
+        }
+        return getPreco() * (1 - percentual / 100); // Aplica o desconto diretamente no preço do eletrônico, sem
+                                                    // considerar a quantidade
     }
 
     //////////////// Fim da implementação dos métodos da interface Desconto
